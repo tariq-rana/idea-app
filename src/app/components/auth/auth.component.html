@@ -1,0 +1,27 @@
+<div class="AuthForm">
+    <p-card>
+        <div class="AuthForm-form">
+            <form [formGroup]="authForm" (ngSubmit)="login()">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input pInputText type="text" placeholder="username" formControlName="username">
+                </div>
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon">
+                        <i class="fa fa-key"></i>
+                    </span>
+                    <input pInputText type="password" placeholder="password" formControlName="password">
+                </div>    
+                <div class="AuthForm-buttons">
+                    <button pButton class="ui-button-info" type="submit" label="Register"
+                        [disabled]="authForm.invalid" (click)="register()"></button>
+            
+                    <button pButton type="submit" label="Login"
+                        [disabled]="authForm.invalid" ></button>
+                </div>
+            </form>
+        </div>
+    </p-card>
+</div>    
