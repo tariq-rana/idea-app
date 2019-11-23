@@ -5,13 +5,16 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, ActionReducerMap  } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
+
 import { errorReducer,ErrorState } from '@app/store/reducers/errors.reducer';
 import { AuthState, authReducer } from './reducers/auth.reducer';
 import { AuthEffects } from './effects/auth.effects';
+//import { RouterStateUrl } from './reducers/router.reducer';
 
 export interface AppState{
   error: ErrorState;
   auth: AuthState;
+//  router: RouterReducerState<RouterStateUrl>;
 }
 
 export const reducers: ActionReducerMap<AppState> = {

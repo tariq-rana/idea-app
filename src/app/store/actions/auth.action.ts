@@ -22,12 +22,12 @@ export class RegisterUser implements Action{
 
 export class SetInitialUser implements Action{
     readonly type = AuthActionTypes.SET_INITIAL_USER;
-    constructor(public payload:AuthDTO){}
+    constructor(){}
 }
 
 export class SetCurrentUser implements Action{
     readonly type = AuthActionTypes.SET_CURRENT_USER;
-    constructor(public payload:User){}
+    constructor(public payload:User | null){}
 }
 
 export type Action = LoginUser | RegisterUser | SetInitialUser | SetCurrentUser;

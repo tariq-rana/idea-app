@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
+
 import { AppState } from './store/app-store.module';
-//import { AddError } from './store/actions/errors.action';
-import { LoginUser } from './store/actions/auth.action';
-import { AuthDTO } from './models/auth';
+import { SetInitialUser } from './store/actions/auth.action';
+
+import {MessageService} from 'primeng/api';
+
 
 @Component({
   selector: 'app-root',
@@ -14,10 +16,26 @@ import { AuthDTO } from './models/auth';
 export class AppComponent implements OnInit{
   title = 'ideas-app';
 
-  constructor(private store: Store<AppState>){}
+  constructor(private store: Store<AppState>,  private messageService:MessageService){}
 
   ngOnInit(){
-      this.store.dispatch(new LoginUser(<AuthDTO>{username:'Cesar9',password:'password'}));    
-      //this.store.dispatch(new AddError({error:'message'}));
+      
+      this.store.dispatch(new SetInitialUser());    
+      
+      this.store.select(state => state.error).subscribe( val => 
+        this.showError(val.error)
+      );
   }
+  
+
+  showError(err){
+    if(err){
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error Message',
+        detail: err.message || 'Internal server error'
+      })
+    }
+  }
+
 }
