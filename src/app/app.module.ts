@@ -15,12 +15,12 @@ import { UIModule } from './ui.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    NavbarComponent
+    NavbarComponent,
+    
   ],
   imports: [
     AppRoutingModule,
