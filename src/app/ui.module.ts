@@ -6,13 +6,15 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 const UIM = [
   CardModule,
   InputTextModule,
   ButtonModule,
   ToastModule,
-  MenubarModule
+  MenubarModule,
+  ProgressSpinnerModule
 ]
 
 @NgModule({

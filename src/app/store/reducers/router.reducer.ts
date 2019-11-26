@@ -1,26 +1,26 @@
-// import { Params, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
-// import * as fromRouter from '@ngrx/router-store';
+import { Params, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
+import * as fromRouter from '@ngrx/router-store';
 
 
-// export interface RouterStateUrl {
-//     url: string;
-//     queryParams: Params;
-//     params: Params;
-// } 
+export interface RouterStateUrl {
+    url: string;
+    queryParams: Params;
+    params: Params;
+} 
 
-// export class CustomSerializer implements fromRouter.RouterStateSerializer<RouterStateUrl>{
+export class CustomSerializer implements fromRouter.RouterStateSerializer<RouterStateUrl>{
 
 
-//     serialize(routerState: RouterStateSnapshot){
-//         const{ url, root:{queryParams}} = routerState;
-//         let state: ActivatedRouteSnapshot = routerState.root;
+    serialize(routerState: RouterStateSnapshot){
+        const{ url, root:{queryParams}} = routerState;
+        let state: ActivatedRouteSnapshot = routerState.root;
 
-//         while(state.firstChild){
-//             state = state.firstChild;
+        while(state.firstChild){
+            state = state.firstChild;
 
-//         }
-//         const { params } = state;
+        }
+        const { params } = state;
 
-//         return {url, queryParams,params};
-//     }
-// }
+        return {url, queryParams,params};
+    }
+}

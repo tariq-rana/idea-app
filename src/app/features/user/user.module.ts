@@ -6,8 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { UIModule } from '@app/ui.module';
 import { UsersComponent } from './users/users.component';
-import { UserEffects } from './state/user.effects';
 import { userReducer } from './state/user.reducer';
+import { UserEffects } from './state/user.effects';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },

@@ -859,6 +859,11 @@
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-8.5.1.tgz#d8ffca66d77db678f6fcdd6a11bc38a433c7bede"
   integrity sha512-xb5GfXCN13wEUhe5YUN5t9GeP+DzCJYKwtB2pMR94gqMOU2eQdE3qmglRZIMLjsENSAtnFO7i11FPrwG31Jkyw==
 
+"@ngrx/router-store@^8.5.2":
+  version "8.5.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-8.5.2.tgz#57b6382d576c36e12a9db683bd06085380858e04"
+  integrity sha512-e+ftGYhKEoHFI8ndN8+fG7oA2EAJ/WeiJfz3MEMpWrlyENl4R8xv/Wpw6dxOyD1EdqLnVL+NT5mNk5+R5KXPZQ==
+
 "@ngrx/store-devtools@^8.5.1":
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.5.1.tgz#17ad7b605ff85d30d7ffbee9bf43f928583cf010"
