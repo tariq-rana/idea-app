@@ -4,9 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './components/auth/auth.component';
 
 const routes: Routes = [
-  {path:'auth', component:AuthComponent},
-  {path:'users', loadChildren:'@app/features/user/user.module#UserModule'},
-  {path:'ideas', loadChildren:'@app/features/idea/idea.module#IdeaModule'},
+  { path: 'auth', component: AuthComponent },
+  { path: 'ideas', loadChildren: '@app/features/idea/idea.module#IdeaModule' },
+  { path: 'users', loadChildren: '@app/features/user/user.module#UserModule' },
+  { path: '**', redirectTo: 'ideas' }
 ];
 
 @NgModule({
